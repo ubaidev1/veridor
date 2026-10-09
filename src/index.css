@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  /* Seductive, Intimidating Luxury Leather Brand Palette */
+  --color-obsidian: #0E0F12;
+  --color-charcoal: #141519;
+  --color-graphite: #1B1C21;
+  --color-espresso: #241712;
+  --color-brass: #C5A880;
+  --color-brass-light: #E0C8A4;
+  --color-cognac: #A88770;
+  --color-cognac-rich: #C28B58;
+  --color-amber-ember: #E5A85A;
+  --color-stone: #D4C4B4;
+  --color-ivory: #F5EFEB;
+  --color-oxblood: #3E1B21;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #0E0F12;
+    color: #F5EFEB;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* ============================================================
+   DISTINCT SECTION BACKGROUND SYSTEMS (Unified, No Fragmented Strips)
+   ============================================================ */
+
+/* 1. Black Leather Section: Visible rich pebble grain & chiaroscuro rim lighting */
+.section-black-leather {
+  background-color: #0E0F12;
+  background-image: 
+    radial-gradient(ellipse at 40% 10%, rgba(197, 168, 128, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse at 85% 65%, rgba(140, 86, 53, 0.20) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(14, 15, 18, 0.68) 0%, rgba(14, 15, 18, 0.92) 100%),
+    url('/src/assets/images/macro_obsidian_pebble_grain_1791571531094.jpg');
+  background-size: 800px auto, 700px auto, cover, 500px auto;
+  background-position: top center, center right, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+}
+
+/* 2. Dark Brown Leather Section: Authentic espresso & rich cognac grain with warm creases */
+.section-brown-leather {
+  background-color: #1B130F;
+  background-image: 
+    radial-gradient(ellipse at 60% 20%, rgba(212, 155, 106, 0.25) 0%, transparent 65%),
+    radial-gradient(ellipse at 15% 75%, rgba(140, 86, 53, 0.22) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(27, 19, 15, 0.74) 0%, rgba(27, 19, 15, 0.90) 100%),
+    url('/src/assets/images/rich_brown_leather_1791573615033.jpg');
+  background-size: 800px auto, 600px auto, cover, cover;
+  background-position: top center, bottom left, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+}
+
+/* 3. Warm Light Section: Tactile atelier stone & plaster with soft ivory warmth */
+.section-warm-light {
+  background-color: #F6F2EB;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.7) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 80%, rgba(212, 196, 180, 0.3) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(246, 242, 235, 0.93) 0%, rgba(238, 232, 221, 0.98) 100%),
+    url('/src/assets/images/atelier_plaster_stone_texture_1791569980495.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #141518;
+}
+
+/* 4. Charcoal Atelier Section: Smoked graphite with directional amber spotlighting */
+.section-charcoal-atelier {
+  background-color: #131417;
+  background-image: 
+    radial-gradient(ellipse at 75% 20%, rgba(197, 168, 128, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 75%, rgba(140, 86, 53, 0.14) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(19, 20, 23, 0.95) 0%, rgba(15, 16, 18, 0.98) 100%),
+    url('/src/assets/images/macro_obsidian_pebble_grain_1791571531094.jpg');
+  background-size: 800px auto, 600px auto, cover, 600px auto;
+  background-position: top right, bottom left, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+}
+
+/* Seductive Leather Patina Card */
+.card-leather-patina {
+  background: 
+    linear-gradient(135deg, rgba(27, 28, 33, 0.95) 0%, rgba(18, 19, 23, 0.98) 100%),
+    url('/src/assets/images/macro_obsidian_pebble_grain_1791571531094.jpg');
+  background-size: cover, 400px auto;
+  border: 1px solid rgba(197, 168, 128, 0.26);
+  box-shadow: 0 12px 36px -5px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.card-leather-patina:hover {
+  border-color: rgba(197, 168, 128, 0.65);
+  box-shadow: 0 18px 46px -5px rgba(0, 0, 0, 0.95), 0 0 30px rgba(197, 168, 128, 0.18);
+}
+
+/* Gold / Brass Metallic Gradient Text */
+.text-metallic-brass {
+  background: linear-gradient(135deg, #FAF6F0 0%, #C5A880 40%, #E8D3B9 70%, #C5A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tactile 35mm Film Grain Overlay */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* Luxury Seductive Button System */
+.btn-ivory-on-dark {
+  background: linear-gradient(180deg, #FAF6F0 0%, #E8DFC8 100%);
+  color: #0E0F12;
+  border: 1px solid rgba(197, 168, 128, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-ivory-on-dark:hover {
+  background: linear-gradient(180deg, #FFFFFF 0%, #EFE7D8 100%);
+  border-color: #C5A880;
+  color: #0E0F12;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(197, 168, 128, 0.32), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.btn-outline-on-dark {
+  background: rgba(18, 19, 23, 0.75);
+  backdrop-filter: blur(12px);
+  color: #F5EFEB;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline-on-dark:hover {
+  background: rgba(197, 168, 128, 0.15);
+  border-color: #C5A880;
+  color: #FAF6F0;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.65), 0 0 18px rgba(197, 168, 128, 0.2);
+}
+
+.btn-charcoal-on-light {
+  background-color: #0E0F12;
+  color: #FAF6F0;
+  border: 1px solid rgba(197, 168, 128, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-charcoal-on-light:hover {
+  background-color: #1B1C21;
+  border-color: #C5A880;
+  color: #FAF6F0;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.75), 0 0 20px rgba(197, 168, 128, 0.25);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}

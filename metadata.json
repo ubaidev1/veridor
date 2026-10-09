@@ -1,0 +1,8 @@
+{
+  "name": "Veridor — Luxury Leather Goods",
+  "description": "Veridor is an international luxury leather house crafting customizable leather jackets and accessories shaped around your style, your fit, and your choices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
