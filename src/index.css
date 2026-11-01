@@ -41,21 +41,23 @@
 .hero {
   position: relative;
   isolation: isolate;
-  background-color: #0e0f11;
+  background-color: #121316;
   background-image: 
-    /* Top-right corner above right glow fades toward #131111 */
-    radial-gradient(ellipse 35% 32% at 100% 0%, #131111 0%, rgba(19, 17, 17, 0.85) 45%, transparent 80%),
-    /* Dark perimeter and edge vignette */
-    radial-gradient(ellipse 95% 85% at 50% 50%, transparent 45%, rgba(14, 15, 17, 0.65) 80%, #0e0f11 100%),
-    linear-gradient(180deg, #0e0f11 0%, rgba(14, 15, 17, 0.5) 10%, transparent 22%),
-    linear-gradient(0deg, #0e0f11 0%, rgba(14, 15, 17, 0.7) 12%, transparent 25%),
-    linear-gradient(90deg, #0e0f11 0%, rgba(14, 15, 17, 0.6) 10%, transparent 25%),
-    /* Warm glow at top-center and between text and jacket */
-    radial-gradient(ellipse 45% 40% at 42% 15%, rgba(83, 76, 69, 0.85) 0%, rgba(58, 53, 48, 0.55) 45%, transparent 78%),
-    /* Right reddish-brown (mid-height and lower right edge) */
-    radial-gradient(ellipse 40% 55% at 100% 50%, rgba(57, 46, 42, 1) 0%, rgba(55, 41, 35, 0.75) 40%, transparent 80%),
-    /* Bottom-right corner fade */
-    radial-gradient(ellipse 35% 35% at 100% 100%, rgba(35, 26, 23, 0.9) 0%, transparent 75%);
+    /* Top-right subtle atmosphere */
+    radial-gradient(ellipse 35% 32% at 100% 0%, #181515 0%, rgba(24, 20, 20, 0.75) 45%, transparent 80%),
+    /* Soft perimeter framing (gentle vignette, not pitch-black) */
+    radial-gradient(ellipse 95% 85% at 50% 50%, transparent 50%, rgba(14, 15, 17, 0.45) 85%, #0e0f11 100%),
+    linear-gradient(180deg, rgba(14, 15, 17, 0.55) 0%, transparent 18%),
+    linear-gradient(0deg, rgba(14, 15, 17, 0.6) 0%, transparent 18%),
+    linear-gradient(90deg, rgba(14, 15, 17, 0.40) 0%, transparent 20%),
+    /* Warm studio ambient lighting across center */
+    radial-gradient(ellipse 60% 50% at 55% 32%, rgba(197, 168, 128, 0.18) 0%, rgba(140, 86, 53, 0.12) 50%, transparent 80%),
+    /* Warm glow at top-center and between text and jacket (lifted light tones) */
+    radial-gradient(ellipse 48% 42% at 42% 16%, rgba(122, 111, 100, 0.88) 0%, rgba(88, 79, 72, 0.65) 45%, transparent 78%),
+    /* Right reddish-brown (lifted warm cognac / saddle brown) */
+    radial-gradient(ellipse 42% 58% at 100% 50%, rgba(95, 75, 68, 0.95) 0%, rgba(85, 64, 55, 0.75) 42%, transparent 82%),
+    /* Bottom-right corner warmth */
+    radial-gradient(ellipse 38% 38% at 100% 100%, rgba(58, 44, 38, 0.85) 0%, transparent 75%);
   background-repeat: no-repeat;
 }
 
@@ -68,10 +70,10 @@
   background-image: url('/assets/leather-original-tileable.jpg');
   background-repeat: repeat;
   background-size: 280px auto;
-  opacity: 0.30;
+  opacity: 0.32;
   mix-blend-mode: soft-light;
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 45% 30%, #000 20%, transparent 100%);
-          mask-image: radial-gradient(ellipse 80% 80% at 45% 30%, #000 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 48% 32%, #000 25%, rgba(0, 0, 0, 0.5) 75%, transparent 100%);
+          mask-image: radial-gradient(ellipse 85% 85% at 48% 32%, #000 25%, rgba(0, 0, 0, 0.5) 75%, transparent 100%);
 }
 
 /* ============================================================
