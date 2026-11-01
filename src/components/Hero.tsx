@@ -67,73 +67,8 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden text-[#FAF6F0] border-b border-[#C5A880]/20 pt-32 sm:pt-36 lg:pt-40 bg-[#0e0f11]"
+      className="hero relative w-full overflow-hidden text-[#FAF6F0] border-b border-[#C5A880]/20 pt-32 sm:pt-36 lg:pt-40"
     >
-      {/* Full-Bleed Fine-Grain Leather Background: Single Unified Surface, No Strips/Seams */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden bg-[#0e0f11]">
-        {/* Realistic fine-grain leather texture at natural viewing distance (not zoomed macro) */}
-        <img
-          src="/assets/hero_leather_bg.jpg"
-          alt="Veridor luxury atelier fine-grain leather background"
-          className="w-full h-full object-cover object-center"
-          referrerPolicy="no-referrer"
-        />
-
-        {/* Zone 1: COOL NEAR-BLACK (base, main color): whole left edge, top bar, nav strip, bottom-left, bottom-center (#0e0f11 to #131416) */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: `
-              linear-gradient(180deg, #0e0f11 0%, rgba(14, 15, 17, 0.55) 15%, transparent 35%),
-              linear-gradient(0deg, #131416 0%, rgba(19, 20, 22, 0.70) 14%, transparent 30%),
-              linear-gradient(90deg, #0e0f11 0%, rgba(14, 15, 17, 0.65) 9%, transparent 26%)
-            `,
-          }}
-        />
-
-        {/* Zone 2: CHARCOAL GRAIN HIGHLIGHTS: left side behind headline and text (x 250-600) (#191a1b to #272423) */}
-        <div
-          className="absolute inset-0 pointer-events-none mix-blend-screen opacity-60"
-          style={{
-            background: 'radial-gradient(ellipse 50% 60% at 30% 46%, rgba(39, 36, 35, 0.50) 0%, rgba(25, 26, 27, 0.25) 60%, transparent 100%)',
-          }}
-        />
-
-        {/* Zone 3: WARM GRAY-BROWN GLOW: top-center, above headline & between text and jacket (#292522 to #534c45, Peak #534c45 at x≈56% y≈18%, Secondary #39342f at x≈65% y≈50%) */}
-        <div
-          className="absolute inset-0 pointer-events-none mix-blend-screen"
-          style={{
-            background: `
-              radial-gradient(circle 400px at 56% 18%, rgba(83, 76, 69, 0.52) 0%, rgba(41, 37, 34, 0.22) 55%, transparent 80%),
-              radial-gradient(circle 440px at 65% 50%, rgba(57, 52, 47, 0.38) 0%, transparent 70%)
-            `,
-          }}
-        />
-
-        {/* Zone 4: REDDISH DARK BROWN: right side, beside and below jacket photo (#2d2019 to #392e2a, Peak #392e2a at right edge mid-height) */}
-        <div
-          className="absolute inset-0 pointer-events-none mix-blend-screen opacity-50"
-          style={{
-            background: 'radial-gradient(ellipse 42% 65% at 94% 52%, rgba(57, 46, 42, 0.75) 0%, rgba(45, 32, 25, 0.35) 60%, transparent 85%)',
-          }}
-        />
-
-        {/* Zone 5: FADING REDDISH BROWN: bottom-right and lower-right edge (#2f231e fading to #201815) */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: 'radial-gradient(ellipse 48% 48% at 95% 95%, rgba(47, 35, 30, 0.55) 0%, rgba(32, 24, 21, 0.80) 65%, transparent 100%)',
-          }}
-        />
-
-        {/* Zone 6: TOP-RIGHT CORNER: above right glow (#131010, almost black with tiny red tint) */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: 'radial-gradient(ellipse 35% 35% at 95% 8%, rgba(19, 16, 16, 0.88) 0%, transparent 85%)',
-          }}
-        />
-      </div>
 
       {/* Main Split Layout */}
       <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-9.5rem)] flex flex-col lg:flex-row items-stretch relative z-10 px-6 sm:px-12 lg:px-16 pb-14 lg:pb-20 gap-10 lg:gap-14">

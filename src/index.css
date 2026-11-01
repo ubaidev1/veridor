@@ -35,6 +35,42 @@
 }
 
 /* ============================================================
+   HERO BACKGROUND SYSTEM (Separated Color & Texture)
+   ============================================================ */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  background-color: #0e0f11;
+  background-image: 
+    /* Dark edge vignette */
+    radial-gradient(ellipse 95% 85% at 50% 50%, transparent 45%, rgba(14, 15, 17, 0.75) 80%, #0e0f11 100%),
+    linear-gradient(180deg, #0e0f11 0%, rgba(14, 15, 17, 0.6) 12%, transparent 28%),
+    linear-gradient(0deg, #0e0f11 0%, rgba(14, 15, 17, 0.7) 10%, transparent 25%),
+    linear-gradient(90deg, #0e0f11 0%, rgba(14, 15, 17, 0.5) 8%, transparent 22%),
+    /* Warm glow at top-center, ellipse at 42% 15%, from #534c45 down to #292522 then transparent */
+    radial-gradient(ellipse 65% 55% at 42% 15%, #534c45 0%, #292522 45%, transparent 75%),
+    /* Reddish-brown at the right edge, mid-height, from #392e2a to #2d2019 then transparent */
+    radial-gradient(ellipse 55% 65% at 100% 50%, #392e2a 0%, #2d2019 45%, transparent 80%),
+    /* Fading #2f231e to #201815 at the bottom-right */
+    radial-gradient(ellipse 50% 50% at 98% 95%, #2f231e 0%, #201815 50%, transparent 85%);
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url('/assets/leather-original-tileable.jpg');
+  background-repeat: repeat;
+  background-size: 500px auto;
+  opacity: 0.35;
+  mix-blend-mode: soft-light;
+}
+
+/* ============================================================
    DISTINCT SECTION BACKGROUND SYSTEMS (Unified, No Fragmented Strips)
    ============================================================ */
 
