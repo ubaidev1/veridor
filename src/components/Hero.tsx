@@ -19,38 +19,38 @@ export const Hero: React.FC<HeroProps> = ({
   const hotspots = [
     {
       id: 1,
-      x: '24%',
-      y: '26%',
-      title: 'Diamond-Quilted Shoulder Gusset',
-      desc: 'Reinforced dual-needle accordion pleats built into the shoulder line for unrestricted arm reach on the road.'
+      x: '20%',
+      y: '52%',
+      title: 'Ergonomic Draped Sleeve & Grain Crease',
+      desc: 'Buttery-smooth full-grain hide that molds naturally with rich organic creasing, ensuring effortless mobility.'
     },
     {
       id: 2,
-      x: '41%',
-      y: '28%',
-      title: 'Double-Snap Notched Lapel',
-      desc: 'Firm-temper hide collar fitted with solid aged brass snaps that stay locked against high-speed wind buffeting.'
+      x: '55%',
+      y: '30%',
+      title: 'Draped Asymmetric Atelier Lapel',
+      desc: 'Gracefully folded uncorrected hide displaying hand-burnished edges and a glimpse of breathable cupro silk lining.'
     },
     {
       id: 3,
-      x: '55%',
-      y: '42%',
-      title: 'Heavy-Duty Brass Zippers',
-      desc: 'Smooth, sturdy solid metal teeth with antique patina that will never jam, break, or corrode under stress.'
+      x: '75%',
+      y: '31%',
+      title: 'Antiqued Brass Collar Fastener',
+      desc: 'Precision-machined low-profile snap finished in deep antique brass for an understated, secure closure.'
     },
     {
       id: 4,
-      x: '42%',
-      y: '54%',
-      title: '100% Genuine Full-Grain Leather',
-      desc: 'Uncorrected drum-dyed natural steerhide that softens and molds permanently to your body shape.'
+      x: '34%',
+      y: '55%',
+      title: 'Dual-Needle Welted Jet Pockets',
+      desc: 'Reinforced saddle stitching with waxed thread, tailored flush against the body for clean architectural lines.'
     },
     {
       id: 5,
-      x: '62%',
-      y: '74%',
-      title: 'Forged Brass Roller Buckle',
-      desc: 'Heavy-gauge cast brass belt hardware anchored with bar-tack stitching to dial in your tailored waist fit.'
+      x: '43%',
+      y: '82%',
+      title: 'Heavy-Gauge Antiqued Brass Zipper',
+      desc: 'Smooth, custom-cast solid brass teeth and drop pull designed for a lifetime of jam-free closure.'
     }
   ];
 
@@ -67,18 +67,79 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden section-black-leather text-[#F5EFEB] border-b border-[#C5A880]/25 pt-28 sm:pt-32 lg:pt-36"
+      className="relative w-full overflow-hidden text-[#FAF6F0] border-b border-[#C5A880]/20 pt-32 sm:pt-36 lg:pt-40 bg-[#0e0f11]"
     >
-      {/* Seductive, Intimidating Ambient Lighting (Warm Cognac, Molten Amber & Smoked Espresso) */}
-      <div className="absolute top-10 left-1/5 w-[750px] h-[450px] bg-[#C5A880]/15 rounded-full blur-[170px] pointer-events-none" />
-      <div className="absolute top-1/3 right-10 w-[650px] h-[450px] bg-[#8C5635]/25 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute -bottom-10 left-1/3 w-[500px] h-[300px] bg-[#421B21]/20 rounded-full blur-[150px] pointer-events-none" />
+      {/* Full-Bleed Fine-Grain Leather Background: Single Unified Surface, No Strips/Seams */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden bg-[#0e0f11]">
+        {/* Realistic fine-grain leather texture at natural viewing distance (not zoomed macro) */}
+        <img
+          src="/assets/hero_leather_bg.jpg"
+          alt="Veridor luxury atelier fine-grain leather background"
+          className="w-full h-full object-cover object-center"
+          referrerPolicy="no-referrer"
+        />
+
+        {/* Zone 1: COOL NEAR-BLACK (base, main color): whole left edge, top bar, nav strip, bottom-left, bottom-center (#0e0f11 to #131416) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: `
+              linear-gradient(180deg, #0e0f11 0%, rgba(14, 15, 17, 0.55) 15%, transparent 35%),
+              linear-gradient(0deg, #131416 0%, rgba(19, 20, 22, 0.70) 14%, transparent 30%),
+              linear-gradient(90deg, #0e0f11 0%, rgba(14, 15, 17, 0.65) 9%, transparent 26%)
+            `,
+          }}
+        />
+
+        {/* Zone 2: CHARCOAL GRAIN HIGHLIGHTS: left side behind headline and text (x 250-600) (#191a1b to #272423) */}
+        <div
+          className="absolute inset-0 pointer-events-none mix-blend-screen opacity-60"
+          style={{
+            background: 'radial-gradient(ellipse 50% 60% at 30% 46%, rgba(39, 36, 35, 0.50) 0%, rgba(25, 26, 27, 0.25) 60%, transparent 100%)',
+          }}
+        />
+
+        {/* Zone 3: WARM GRAY-BROWN GLOW: top-center, above headline & between text and jacket (#292522 to #534c45, Peak #534c45 at x≈56% y≈18%, Secondary #39342f at x≈65% y≈50%) */}
+        <div
+          className="absolute inset-0 pointer-events-none mix-blend-screen"
+          style={{
+            background: `
+              radial-gradient(circle 400px at 56% 18%, rgba(83, 76, 69, 0.52) 0%, rgba(41, 37, 34, 0.22) 55%, transparent 80%),
+              radial-gradient(circle 440px at 65% 50%, rgba(57, 52, 47, 0.38) 0%, transparent 70%)
+            `,
+          }}
+        />
+
+        {/* Zone 4: REDDISH DARK BROWN: right side, beside and below jacket photo (#2d2019 to #392e2a, Peak #392e2a at right edge mid-height) */}
+        <div
+          className="absolute inset-0 pointer-events-none mix-blend-screen opacity-50"
+          style={{
+            background: 'radial-gradient(ellipse 42% 65% at 94% 52%, rgba(57, 46, 42, 0.75) 0%, rgba(45, 32, 25, 0.35) 60%, transparent 85%)',
+          }}
+        />
+
+        {/* Zone 5: FADING REDDISH BROWN: bottom-right and lower-right edge (#2f231e fading to #201815) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse 48% 48% at 95% 95%, rgba(47, 35, 30, 0.55) 0%, rgba(32, 24, 21, 0.80) 65%, transparent 100%)',
+          }}
+        />
+
+        {/* Zone 6: TOP-RIGHT CORNER: above right glow (#131010, almost black with tiny red tint) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse 35% 35% at 95% 8%, rgba(19, 16, 16, 0.88) 0%, transparent 85%)',
+          }}
+        />
+      </div>
 
       {/* Main Split Layout */}
-      <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-8.5rem)] flex flex-col lg:flex-row items-stretch relative z-10 px-6 sm:px-12 lg:px-16 pb-12 lg:pb-16 gap-10 lg:gap-14">
+      <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-9.5rem)] flex flex-col lg:flex-row items-stretch relative z-10 px-6 sm:px-12 lg:px-16 pb-14 lg:pb-20 gap-10 lg:gap-14">
         
         {/* Left Column: Headline, Clear Copy & Leather Buttons */}
-        <div className="flex-1 flex flex-col justify-center py-6 sm:py-10 lg:py-16 z-10">
+        <div className="flex-1 flex flex-col justify-center py-6 sm:py-10 lg:py-14 z-10">
           <div className="max-w-xl">
             {/* Eyebrow / Kicker */}
             <div className="flex items-center gap-3 text-xs tracking-[0.28em] uppercase text-[#C5A880] font-semibold mb-6">
@@ -134,21 +195,18 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
 
-        {/* Right Column: Seductive, Intimidating Leather Jacket Campaign Photography with Interactive Inspection Pins */}
-        <div className="flex-1 relative min-h-[460px] sm:min-h-[540px] lg:min-h-full bg-[#141518] overflow-hidden border border-[#C5A880]/30 shadow-2xl flex items-center justify-center group">
-          {/* Seductive Leather Jacket Photography */}
+        {/* Right Column: Seductive, Intimidating Leather Jacket Lay-Down Atelier Photography with Interactive Inspection Pins */}
+        <div className="flex-1 relative min-h-[460px] sm:min-h-[540px] lg:min-h-full bg-[#101218]/90 backdrop-blur-sm overflow-hidden border border-[#C5A880]/25 shadow-2xl flex items-center justify-center group">
+          {/* Seductive Lay-Down Leather Jacket Photography */}
           <img
-            src="/src/assets/images/cinematic_leather_jacket_1791572849759.jpg"
-            alt="Intimidating ultra-premium handcrafted black and dark espresso leather biker jacket on tailor atelier stand"
-            className="w-full h-full object-cover object-center lg:absolute lg:inset-0 transition-transform duration-1000 group-hover:scale-102"
+            src="/src/assets/images/hero_laydown_luxury_jacket_1793498878160.jpg"
+            alt="Artisanal luxury dark espresso leather jacket laid down flat in atelier studio composition"
+            className="w-full h-full object-cover object-center lg:absolute lg:inset-0 transition-transform duration-1000 group-hover:scale-103"
             referrerPolicy="no-referrer"
           />
 
-          {/* Seductive Warm Cognac & Obsidian Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111215] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#111215]/80 lg:via-transparent lg:to-[#111215]/20 pointer-events-none" />
-
-          {/* Warm Amber Rim Lighting Flare */}
-          <div className="absolute top-1/4 right-0 w-48 h-48 bg-[#C5A880]/20 rounded-full blur-[80px] pointer-events-none" />
+          {/* Seductive Subtle Gradient Overlay for Natural Integration */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/85 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#0B0C10]/60 lg:via-transparent lg:to-[#0B0C10]/30 pointer-events-none" />
 
           {/* Interactive Inspection Hotspots */}
           {hotspots.map((spot) => (
@@ -168,7 +226,7 @@ export const Hero: React.FC<HeroProps> = ({
 
               {/* Tooltip Card */}
               <div
-                className={`absolute left-1/2 -translate-x-1/2 bottom-10 w-64 sm:w-72 p-4 bg-[#141518]/95 backdrop-blur-md border border-[#C5A880] shadow-2xl rounded-none text-left transition-all duration-300 pointer-events-none z-30 ${
+                className={`absolute left-1/2 -translate-x-1/2 bottom-10 w-64 sm:w-72 p-4 bg-[#101218]/95 backdrop-blur-md border border-[#C5A880] shadow-2xl rounded-none text-left transition-all duration-300 pointer-events-none z-30 ${
                   activeHotspot === spot.id
                     ? 'opacity-100 scale-100 translate-y-0'
                     : 'opacity-0 scale-95 translate-y-2'
@@ -189,7 +247,7 @@ export const Hero: React.FC<HeroProps> = ({
           ))}
 
           {/* Seductive Floating Tag: Interactive Prompt */}
-          <div className="absolute bottom-5 left-5 bg-[#0D0E0F]/90 backdrop-blur-md border border-[#C5A880]/30 px-3.5 py-2 text-xs text-[#FAF6F0] flex items-center gap-2 shadow-xl">
+          <div className="absolute bottom-5 left-5 bg-[#0B0C10]/90 backdrop-blur-md border border-[#C5A880]/30 px-3.5 py-2 text-xs text-[#FAF6F0] flex items-center gap-2 shadow-xl">
             <span className="w-2 h-2 rounded-full bg-[#C5A880] animate-pulse" />
             <span className="font-mono text-[10px] sm:text-[11px] text-[#C5A880] uppercase tracking-wider">
               Touch pins to inspect handcrafted details
@@ -197,19 +255,19 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Featured Leather Mark */}
-          <div className="absolute top-5 right-5 bg-[#0D0E0F]/90 backdrop-blur-md border border-[#C5A880]/30 px-3.5 py-2 text-left shadow-xl hidden sm:block">
+          <div className="absolute top-5 right-5 bg-[#0B0C10]/90 backdrop-blur-md border border-[#C5A880]/30 px-3.5 py-2 text-left shadow-xl hidden sm:block">
             <p className="text-[9px] font-mono uppercase tracking-widest text-[#C5A880] font-semibold mb-0.5">
-              Silhouette Highlight
+              Atelier Lay-Flat Showcase
             </p>
             <p className="font-serif text-xs text-[#FAF6F0]">
-              The Sovereign Biker · 1.4mm Heavy Steerhide
+              The Artisan Drape · Hand-Burnished Bespoke Leatherwork
             </p>
           </div>
         </div>
       </div>
 
       {/* Trust Strip: 4 Clear Atelier Pillars */}
-      <div className="border-t border-[#C5A880]/20 bg-black/35 backdrop-blur-md">
+      <div className="border-t border-[#C5A880]/15 bg-[#0e0f11]/90 backdrop-blur-md relative z-10">
         <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-16 py-7 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs text-[#D4C4B4]">
           <div className="flex flex-col gap-1 border-l-2 border-[#C5A880] pl-4">
             <span className="font-serif text-[#FAF6F0] text-base font-normal">100% Genuine Leather</span>

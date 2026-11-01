@@ -38,30 +38,28 @@
    DISTINCT SECTION BACKGROUND SYSTEMS (Unified, No Fragmented Strips)
    ============================================================ */
 
-/* 1. Black Leather Section: Visible rich pebble grain & chiaroscuro rim lighting */
+/* 1. Black Leather Section: Rich pebble grain with subtle dark chiaroscuro */
 .section-black-leather {
   background-color: #0E0F12;
   background-image: 
-    radial-gradient(ellipse at 40% 10%, rgba(197, 168, 128, 0.18) 0%, transparent 65%),
-    radial-gradient(ellipse at 85% 65%, rgba(140, 86, 53, 0.20) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(14, 15, 18, 0.68) 0%, rgba(14, 15, 18, 0.92) 100%),
+    radial-gradient(ellipse at 40% 10%, rgba(197, 168, 128, 0.15) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(14, 15, 18, 0.72) 0%, rgba(14, 15, 18, 0.92) 100%),
     url('/src/assets/images/macro_obsidian_pebble_grain_1791571531094.jpg');
-  background-size: 800px auto, 700px auto, cover, 500px auto;
-  background-position: top center, center right, center, center;
-  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* 2. Dark Brown Leather Section: Authentic espresso & rich cognac grain with warm creases */
 .section-brown-leather {
   background-color: #1B130F;
   background-image: 
-    radial-gradient(ellipse at 60% 20%, rgba(212, 155, 106, 0.25) 0%, transparent 65%),
-    radial-gradient(ellipse at 15% 75%, rgba(140, 86, 53, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse at 60% 20%, rgba(212, 155, 106, 0.22) 0%, transparent 65%),
     linear-gradient(180deg, rgba(27, 19, 15, 0.74) 0%, rgba(27, 19, 15, 0.90) 100%),
     url('/src/assets/images/rich_brown_leather_1791573615033.jpg');
-  background-size: 800px auto, 600px auto, cover, cover;
-  background-position: top center, bottom left, center, center;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* 3. Warm Light Section: Tactile atelier stone & plaster with soft ivory warmth */
@@ -82,13 +80,12 @@
 .section-charcoal-atelier {
   background-color: #131417;
   background-image: 
-    radial-gradient(ellipse at 75% 20%, rgba(197, 168, 128, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 75%, rgba(140, 86, 53, 0.14) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(19, 20, 23, 0.95) 0%, rgba(15, 16, 18, 0.98) 100%),
+    radial-gradient(ellipse at 75% 20%, rgba(197, 168, 128, 0.15) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(19, 20, 23, 0.92) 0%, rgba(15, 16, 18, 0.96) 100%),
     url('/src/assets/images/macro_obsidian_pebble_grain_1791571531094.jpg');
-  background-size: 800px auto, 600px auto, cover, 600px auto;
-  background-position: top right, bottom left, center, center;
-  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Seductive Leather Patina Card */
