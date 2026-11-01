@@ -131,21 +131,17 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Right Column: Seductive, Intimidating Leather Jacket Lay-Down Atelier Photography with Interactive Inspection Pins */}
-        <div className="flex-1 relative min-h-[460px] sm:min-h-[540px] lg:min-h-full bg-[#13151b]/80 backdrop-blur-sm overflow-hidden border border-[#C5A880]/30 shadow-2xl flex items-center justify-center group">
-          {/* Seductive Lay-Down Leather Jacket Photography with warm studio illumination */}
+        <div className="flex-1 relative min-h-[460px] sm:min-h-[540px] lg:min-h-full bg-[#101218]/90 backdrop-blur-sm overflow-hidden border border-[#C5A880]/25 shadow-2xl flex items-center justify-center group">
+          {/* Seductive Lay-Down Leather Jacket Photography */}
           <img
             src="/src/assets/images/hero_laydown_luxury_jacket_1793498878160.jpg"
             alt="Artisanal luxury dark espresso leather jacket laid down flat in atelier studio composition"
-            className="w-full h-full object-cover object-center lg:absolute lg:inset-0 transition-transform duration-1000 group-hover:scale-103 brightness-[1.07] contrast-[1.04]"
+            className="w-full h-full object-cover object-center lg:absolute lg:inset-0 transition-transform duration-1000 group-hover:scale-103"
             referrerPolicy="no-referrer"
           />
 
-          {/* Seductive Atelier Lighting: Warm Studio Ambient Rim Light */}
-          <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-[#C5A880]/15 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-[#A88770]/12 rounded-full blur-[90px] pointer-events-none" />
-
-          {/* Softened Gradient Overlay for Seamless Integration without Black Crushing */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#0B0C10]/35 lg:via-transparent lg:to-[#0B0C10]/15 pointer-events-none" />
+          {/* Seductive Subtle Gradient Overlay for Natural Integration */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/65 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#0B0C10]/40 lg:via-transparent lg:to-[#0B0C10]/20 pointer-events-none" />
 
           {/* Interactive Inspection Hotspots */}
           {hotspots.map((spot) => (

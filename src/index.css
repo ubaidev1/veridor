@@ -41,23 +41,25 @@
 .hero {
   position: relative;
   isolation: isolate;
-  background-color: #121316;
+  background-color: #030406;
   background-image: 
-    /* Top-right subtle atmosphere */
-    radial-gradient(ellipse 35% 32% at 100% 0%, #181515 0%, rgba(24, 20, 20, 0.75) 45%, transparent 80%),
-    /* Soft perimeter framing (gentle vignette, not pitch-black) */
-    radial-gradient(ellipse 95% 85% at 50% 50%, transparent 50%, rgba(14, 15, 17, 0.45) 85%, #0e0f11 100%),
-    linear-gradient(180deg, rgba(14, 15, 17, 0.55) 0%, transparent 18%),
-    linear-gradient(0deg, rgba(14, 15, 17, 0.6) 0%, transparent 18%),
-    linear-gradient(90deg, rgba(14, 15, 17, 0.40) 0%, transparent 20%),
-    /* Warm studio ambient lighting across center */
-    radial-gradient(ellipse 60% 50% at 55% 32%, rgba(197, 168, 128, 0.18) 0%, rgba(140, 86, 53, 0.12) 50%, transparent 80%),
-    /* Warm glow at top-center and between text and jacket (lifted light tones) */
-    radial-gradient(ellipse 48% 42% at 42% 16%, rgba(122, 111, 100, 0.88) 0%, rgba(88, 79, 72, 0.65) 45%, transparent 78%),
-    /* Right reddish-brown (lifted warm cognac / saddle brown) */
-    radial-gradient(ellipse 42% 58% at 100% 50%, rgba(95, 75, 68, 0.95) 0%, rgba(85, 64, 55, 0.75) 42%, transparent 82%),
-    /* Bottom-right corner warmth */
-    radial-gradient(ellipse 38% 38% at 100% 100%, rgba(58, 44, 38, 0.85) 0%, transparent 75%);
+    /* Top-right corner above right glow fades toward #131111 */
+    radial-gradient(ellipse 42% 38% at 100% 0%, #0c0a0a 0%, rgba(12, 10, 10, 0.95) 48%, rgba(17, 15, 15, 0.80) 68%, transparent 88%),
+    /* Dark perimeter and smooth edge vignette */
+    radial-gradient(ellipse 95% 85% at 50% 40%, transparent 35%, rgba(10, 11, 13, 0.45) 65%, rgba(10, 11, 13, 0.85) 86%, #0e0f11 100%),
+    linear-gradient(180deg, #0e0f11 0%, rgba(14, 15, 17, 0.45) 8%, transparent 20%),
+    linear-gradient(0deg, #0e0f11 0%, rgba(14, 15, 17, 0.60) 10%, transparent 22%),
+    linear-gradient(90deg, #0e0f11 0%, rgba(14, 15, 17, 0.50) 8%, transparent 22%),
+    /* Top-center main warm glow (Gaussian eased 5-stop falloff, calibrated to hit #534c44 and headline #282625) */
+    radial-gradient(ellipse 31% 30% at 42% 16%, rgba(114, 102, 90, 0.76) 0%, rgba(94, 82, 72, 0.56) 24%, rgba(65, 56, 48, 0.35) 48%, rgba(38, 32, 28, 0.18) 72%, transparent 100%),
+    /* Between text and jacket secondary ambient fill */
+    radial-gradient(ellipse 26% 36% at 49% 46%, rgba(80, 70, 62, 0.58) 0%, rgba(62, 54, 46, 0.38) 28%, rgba(42, 36, 30, 0.20) 56%, rgba(24, 20, 18, 0.08) 80%, transparent 100%),
+    /* Right warm reddish-brown mid lighting (hits #392e2a at mid-height) */
+    radial-gradient(ellipse 24% 38% at 100% 48%, rgba(95, 72, 62, 0.86) 0%, rgba(80, 58, 48, 0.68) 26%, rgba(60, 44, 36, 0.45) 52%, rgba(38, 28, 22, 0.20) 75%, transparent 100%),
+    /* Right lower reddish-brown lighting (hits #372923 at lower-right) */
+    radial-gradient(ellipse 26% 40% at 100% 72%, rgba(120, 88, 74, 0.95) 0%, rgba(102, 72, 58, 0.76) 30%, rgba(72, 50, 40, 0.50) 58%, rgba(42, 28, 22, 0.24) 80%, transparent 100%),
+    /* Bottom-right corner accent toward #231a17 */
+    radial-gradient(ellipse 36% 36% at 100% 100%, rgba(105, 76, 64, 0.90) 0%, rgba(78, 54, 44, 0.65) 36%, rgba(48, 32, 26, 0.35) 68%, transparent 100%);
   background-repeat: no-repeat;
 }
 
@@ -67,13 +69,13 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: url('/assets/leather-original-tileable.jpg');
+  background-image: url('/assets/leather-dark-tileable.jpg');
   background-repeat: repeat;
-  background-size: 280px auto;
-  opacity: 0.32;
-  mix-blend-mode: soft-light;
-  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 48% 32%, #000 25%, rgba(0, 0, 0, 0.5) 75%, transparent 100%);
-          mask-image: radial-gradient(ellipse 85% 85% at 48% 32%, #000 25%, rgba(0, 0, 0, 0.5) 75%, transparent 100%);
+  background-size: 500px auto;
+  opacity: 0.65;
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(ellipse 84% 78% at 54% 28%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.90) 24%, rgba(0, 0, 0, 0.56) 50%, rgba(0, 0, 0, 0.28) 78%, rgba(0, 0, 0, 0.14) 100%);
+          mask-image: radial-gradient(ellipse 84% 78% at 54% 28%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.90) 24%, rgba(0, 0, 0, 0.56) 50%, rgba(0, 0, 0, 0.28) 78%, rgba(0, 0, 0, 0.14) 100%);
 }
 
 /* ============================================================
